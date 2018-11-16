@@ -1,3 +1,4 @@
+#-*-coding: utf-8-*-
 from time import sleep
 from threading import *
 
@@ -10,7 +11,7 @@ class Chrone():
 		h = 0
 		m = 0
 		s = 0
-		for t in range(0,10000):
+		while True:
 			sleep(1)
 			s += 1
 			if s == 60:

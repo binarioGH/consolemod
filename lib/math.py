@@ -1,3 +1,4 @@
+#-*-coding: utf-8-*-
 def mult(*nums):
 	#Multiplicaciones
 	t = nums[0]

@@ -6,7 +6,7 @@ if __name__ == '__main__':
 	if str(pv())[0] == "3":
 		raw_input = input
 	if str(s()) == "Windows":
-		clear = "cls"
+		clear = "cls" 
 	else:
 		clear = "clear"
 	cmd = " "
