@@ -25,3 +25,26 @@ def div(n1, n2):
 	#division
 	return n1 / n2
 
+def higher(*nums, mx=True, lst=["none"]):
+	try:
+		ret = nums[0]
+	except:
+		try:
+			if lst[0] == "none":
+				return 0
+			else:
+				ret = lst[0]
+				nums = lst
+		except:
+			return 0
+	for num in nums:
+		if mx:
+			if num >= ret:
+				ret = num
+		else:
+			if num <= ret:
+				ret = num
+	return ret
+
+def lower(*n):
+	return higher(lst=n, mx=False)
