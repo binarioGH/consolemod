@@ -48,3 +48,10 @@ def higher(*nums, mx=True, lst=["none"]):
 
 def lower(*n):
 	return higher(lst=n, mx=False)
+
+
+def middle(n1, n2):
+	low = lower(n1, n2)
+	mid = (higher(n1, n2) - low) / 2
+	mid += low
+	return mid
