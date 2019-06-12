@@ -54,4 +54,16 @@ def middle(n1, n2):
 	low = lower(n1, n2)
 	mid = (higher(n1, n2) - low) / 2
 	mid += low
-	return mid
+	return mid 
+
+def interiorAngles(n):
+	return (n-2)*180
+
+def sumExteriorAngles(n):
+	return 360
+
+def eachAngle(n):
+	return ((n-2) * 180 )/n
+
+def eachExteriorAngle(n):
+	return 360/n
