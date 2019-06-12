@@ -67,3 +67,17 @@ def eachAngle(n):
 
 def eachExteriorAngle(n):
 	return 360/n
+
+def angleTable(*angles):
+	info = {}
+	for angle in angles:
+		info[str(angle)] = {"Interior Angle Sum": interiorAngles(angle),
+		"Each Interior Angle": eachAngle(angle),
+		"Exterior Angle Sum": 360,
+		"Each Exterior Angle": eachExteriorAngle(angle)}
+	return info
+def displayAngleTable(info):
+	for angle in info:
+		print("-"*80)
+		for i in info[angle]:
+			print("{} : {}".format(i, info[angle][i]))
