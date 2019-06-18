@@ -81,3 +81,9 @@ def displayAngleTable(info):
 		print("-"*80)
 		for i in info[angle]:
 			print("{} : {}".format(i, info[angle][i]))
+
+def average(*nums):
+	total = 0
+	for num in nums:
+		total += num
+	return total / len(nums)
