@@ -91,3 +91,13 @@ def average(*nums):
 
 def distanceformula(x1, y1, x2, y2):
 	return r((x2 - x1)**2 + (y2 - y1)**2)
+
+def idk(a,b):
+	"This is useful for midpoint formula function."
+	return (a+b)/2
+
+def midpointformula(x1, y1, x2, y2):
+	return (idk(x1, x2), idk(y1, y2))
+
+def slope(x1, y1, x2, y2):
+	return y2 - y1 / x2 - x1
