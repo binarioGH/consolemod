@@ -1,4 +1,5 @@
 #-*-coding: utf-8-*-
+from math import sqrt as r
 def mult(*nums):
 	#Multiplicaciones
 	t = nums[0]
@@ -87,3 +88,6 @@ def average(*nums):
 	for num in nums:
 		total += num
 	return total / len(nums)
+
+def distanceformula(x1, y1, x2, y2):
+	return r((x2 - x1)**2 + (y2 - y1)**2)
