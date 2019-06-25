@@ -116,3 +116,8 @@ def simplify(n1,n2, m="undefined"):
 def ratio(n1, n2):
 	n1, n2 = simplify(min(n1,n2), max(n1,n2))
 	return "{}:{}".format(n1, n2)
+
+sqrtperimeter = lambda l: l*4
+equilateraltriangleper = lambda l: l*3
+isoscelestriangleper = lambda s, b: s*2 + b
+rectangleper = lambda b, s: b*2 + s*2
