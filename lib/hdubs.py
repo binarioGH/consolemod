@@ -101,3 +101,18 @@ def midpointformula(x1, y1, x2, y2):
 
 def slope(x1, y1, x2, y2):
 	return y2 - y1 / x2 - x1
+
+def simplify(n1,n2, m="undefined"):
+	count = 2
+	if m == "undefined":
+		m = min(n1,n2)
+	while count <= int(m/2):
+		if n1%count == 0 and n2%count == 0:
+			n1 = int(n1/count)
+			n2 = int(n2/count)
+		else:
+			count += 1
+	return (n1, n2)
+def ratio(n1, n2):
+	n1, n2 = simplify(min(n1,n2), max(n1,n2))
+	return "{}:{}".format(n1, n2)
