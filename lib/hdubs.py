@@ -117,7 +117,26 @@ def ratio(n1, n2):
 	n1, n2 = simplify(min(n1,n2), max(n1,n2))
 	return "{}:{}".format(n1, n2)
 
-sqrtperimeter = lambda l: l*4
-equilateraltriangleper = lambda l: l*3
+sqrtperimeter = lambda s: l*4
+equilateraltriangleper = lambda s: l*3
 isoscelestriangleper = lambda s, b: s*2 + b
 rectangleper = lambda b, s: b*2 + s*2
+pentagonper = lambda s: s*5
+hexagonper = lambda s: s*6
+heptagon = lambda s: s*7
+octagon = lambda s: s*8
+
+def hyp(a,b):
+	a **=2
+	b **=2
+	a += b
+	return r(a)
+def leg(h,l):
+	h **=2
+	l **=2
+	h -= l
+	h = absval(h)
+	h = r(h)
+	if h%1 != 0:
+		return h
+	return int(h)
