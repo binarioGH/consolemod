@@ -140,3 +140,17 @@ def leg(h,l):
 	if h%1 != 0:
 		return h
 	return int(h)
+
+def divisors(num):
+	d = []
+	for n in range(2,int(num/2)+1):
+		if num%n == 0:
+			d.append(n)
+	return d
+
+def factors(num):
+	f = []
+	for n in range(2, int(num/2)+1):
+		if num%n == 0:
+			f.append((n,int(num/n)))
+	return f
