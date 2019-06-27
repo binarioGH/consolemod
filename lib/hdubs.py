@@ -3,8 +3,6 @@ from math import sqrt as r
 def mult(*nums):
 	#Multiplicaciones
 	t = nums[0]
-
-	
 	for i in nums[1:]:
 		t*= i
 	return t
@@ -154,3 +152,17 @@ def factors(num):
 		if num%n == 0:
 			f.append((n,int(num/n)))
 	return f
+
+def isrightangle(a,b,c):
+	if hyp(a,b) == c:
+		return True
+	return False
+
+special45 = lambda h: h/r(2)
+special30 = lambda b: b/r(3) 
+
+def sqrtWIP(num):
+	for n in range(2,int(num/2)):
+		if n*n == num:
+			return n
+	return -1
