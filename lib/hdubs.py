@@ -179,4 +179,14 @@ def commonDividers(*numbers):
 				break
 		if count == len(numbers):
 			dividers.append(div)
+	if len(dividers) == 0:
+		return [1] 
 	return dividers
+
+def simplify(num,den):
+	divisor = 0
+	while divisor != 1:
+		divisor = min(commonDividers(num,den))
+		num = int(num/divisor)
+		den = int(den/divisor)
+	return (num,den)
