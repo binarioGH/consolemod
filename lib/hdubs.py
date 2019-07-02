@@ -166,3 +166,17 @@ def sqrtWIP(num):
 		if n*n == num:
 			return n
 	return -1
+
+def commonDividers(*numbers):
+	goto = int(min(numbers)) 
+	dividers = []
+	for div in range(2,goto+1):
+		count = 0
+		for n in numbers:
+			if n%div == 0:
+				count += 1
+			else:
+				break
+		if count == len(numbers):
+			dividers.append(div)
+	return dividers
