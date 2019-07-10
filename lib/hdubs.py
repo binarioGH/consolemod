@@ -190,3 +190,19 @@ def simplify(num,den):
 		num = int(num/divisor)
 		den = int(den/divisor)
 	return (num,den)
+
+def getHyp(leg1, leg2):
+	pleg1 = leg1**2
+	pleg2 = leg2**2
+	hyp = r(pleg1+pleg2)
+	if hyp <= leg1 or hyp <= leg2:
+		return -1
+	return hyp
+
+def getLeg(hyp, leg): 
+	if hyp <= leg:
+		return -1
+	hyp **= 2
+	nleg = hyp - leg**2
+
+	return r(nleg)	
