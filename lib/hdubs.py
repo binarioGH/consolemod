@@ -1,5 +1,6 @@
 #-*-coding: utf-8-*-
 from math import sqrt as r
+PI = 3.14159265359
 def mult(*nums):
 	#Multiplicaciones
 	t = nums[0]
@@ -206,3 +207,12 @@ def getLeg(hyp, leg):
 	nleg = hyp - leg**2
 
 	return r(nleg)	
+#Volume.
+cubeVolume = lambda l: l**3	
+rectangularPrsmVolume = lambda h,b,p: p*(h*b)
+trianglePrsmVolume = lambda h,b,p: p*((h*b)/2)
+triangleArea = lambda h,b: (h*b)/2
+sqrArea = lambda l: l*4
+rectangleArea = lambda h,b: h*b
+circleArea = lambda r: PI*(r**2)
+semiCircleArea = lambda r: (PI*(r**2))/2
