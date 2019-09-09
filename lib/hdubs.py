@@ -207,6 +207,20 @@ def getLeg(hyp, leg):
 	nleg = hyp - leg**2
 
 	return r(nleg)	
+
+def mcm(n1, n2, top=10, all=False):
+	n1l = []
+	n2l = []
+	for n in range(1,top+1):
+		n1l.append(n1*n)
+		n2l.append(n2*n)
+	for n in n1l:
+		if n in n2l:
+			if not all:
+				return n
+			else: 
+				return (n, int(n/n1), int(n/n2))		
+	return -1
 #Volume.
 cubeVolume = lambda l: l**3	
 rectangularPrsmVolume = lambda h,b,p: p*(h*b)
